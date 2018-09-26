@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Amann's Site</title>
+		<link rel="stylesheet" href="index.css"/>
+		<script type="text/javascript" src="index.js"></script>
+		
+		<nav>
+				<div class="head"
+					<ul>
+  						<li class = "navbarli"><a href="file:///Users/paulamann/Documents/GitHub/amannwebsite/Website/index.html">To Do</a></li>
+  						<li class = "navbarli"><a href="file:///Users/paulamann/Documents/GitHub/amannwebsite/Website/motivation.html">Get Motivated!</a></li>
+  						<li class = "navbarli"><a href="file:///Users/paulamann/Documents/GitHub/amannwebsite/Website/aboutme.html">About Me</a></li>
+					</ul>
+				</div>
+			</nav>
+	</head>
+	
+	<body onload="init()">
+		<header>
+			<h1 class="maintitle"> To Do <h1>
+		</header>
+		
+		<div class = "wrap">
+			<div class = "center">
+			<form>
+				<input id = "taskDes" type="text" placeholder="Description"/>
+				<input id = "taskDed" type="text" placeholder="Deadline"/>
+				<input id = "taskCat" type="text" placeholder="Category"/>
+				<input type="button" onclick="addTask()" value="Add"/>
+			</form>
+			</div>
+			<br>
+			<div id = "left">
+			<h2 class="secondtitle">To Do List</h2>
+				<table id="table" class="catlist">
+				  <tr id = "tr">
+				  	<th>Added on</th>
+					<th>Description</th>
+					<th>Deadline</th>
+					<th>Category</th>
+					<th>Status</th>
+				  </tr>
+				</table>
+			</div>
+			
+			<div id = "right">
+			<h3 class="thirdtitle">Categories</h3>
+				<ul class="catlist">
+					<li>Homework</li>
+					<li>AFROTC</li>
+					<li>Work</li>
+					<li>MISC</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>

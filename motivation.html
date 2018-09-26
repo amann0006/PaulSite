@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+}
+
+body {
+  font-family: Impact;
+  font-style: italic;
+  font-size: 1.5rem;
+  margin: 0;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.background{
+	background-image:url("beach-island-maldives-1430677.jpg");
+	background-size: 100%;
+	}
+	
+/* Smooth Transitions*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .7} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .7} 
+  to {opacity: 1}
+}
+</style>
+
+<ul>
+  <li><a href="file:///Users/paulamann/Documents/GitHub/amannwebsite/Website/index.html">To Do</a></li>
+  <li><a href="file:///Users/paulamann/Documents/GitHub/amannwebsite/Website/motivation.html">Get Motivated!</a></li>
+  <li><a href="file:///Users/paulamann/Documents/GitHub/amannwebsite/Website/aboutme.html">About Me</a></li>
+</ul>
+<title>Amann's Site</title>
+</head>
+
+
+<body class="background">
+
+<h2 style="text-align:center">Get Motivated!</h2>
+
+
+
+<div class="row">
+  <div class="column">
+    <img src="motiv1.jpg" style="width:12rem" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="motiv2.jpg" style="width:12rem" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="motiv3.jpg" style="width:12rem" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="motiv4.jpg" style="width:12rem" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="motiv5.jpg" style="width:12rem" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="motiv6.jpg" style="width:12rem" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="motiv7.jpg" style="width:12rem" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="motiv8.jpg" style="width:12rem" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="motiv9.jpg" style="width:12rem" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="motiv10.jpg" style="width:12rem" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="motiv11.jpg" style="width:12rem" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="motiv12.jpg" style="width:12rem" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="motiv13.jpg" style="width:12rem" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="motiv14.jpg" style="width:12rem" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="motiv15.jpg" style="width:12rem" onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="motiv16.jpg" style="width:12rem" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="motiv17.jpg" style="width:12rem" onclick="openModal();currentSlide(17)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="motiv18.jpg" style="width:12rem" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="motiv19.jpg" style="width:12rem" onclick="openModal();currentSlide(19)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="motiv20.jpg" style="width:12rem" onclick="openModal();currentSlide(20)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 20</div>
+      <img src="motiv1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 20</div>
+      <img src="motiv2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 20</div>
+      <img src="motiv3.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 20</div>
+      <img src="motiv4.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 20</div>
+      <img src="motiv5.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">6 / 20</div>
+      <img src="motiv6.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">7 / 20</div>
+      <img src="motiv7.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">8 / 20</div>
+      <img src="motiv8.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">9 / 20</div>
+      <img src="motiv9.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">10 / 20</div>
+      <img src="motiv10.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">11 / 20</div>
+      <img src="motiv11.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">12 / 20</div>
+      <img src="motiv12.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">13 / 20</div>
+      <img src="motiv13.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">14 / 20</div>
+      <img src="motiv14.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">15 / 20</div>
+      <img src="motiv15.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">16 / 20</div>
+      <img src="motiv16.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">17 / 20</div>
+      <img src="motiv17.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">18 / 20</div>
+      <img src="motiv18.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">19 / 20</div>
+      <img src="motiv19.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">20 / 20</div>
+      <img src="motiv20.jpg" style="width:100%">
+    </div>
+    <button onclick="changer()">Auto Play</button>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="motiv1.jpg" style="width:6rem" onclick="currentSlide(1)" alt="Live Your Dream">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="motiv2.jpg" style="width:6rem" onclick="currentSlide(2)" alt="Work Harder">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="motiv3.jpg" style="width:6rem" onclick="currentSlide(3)" alt="What Will You Do?">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="motiv4.jpg" style="width:6rem" onclick="currentSlide(4)" alt="Sail the Rough Seas">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="motiv5.jpg" style="width:6rem" onclick="currentSlide(5)" alt="Don't be Afraid to Fail">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="motiv6.jpg" style="width:6rem" onclick="currentSlide(6)" alt="Use It!">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="motiv7.jpg" style="width:6rem" onclick="currentSlide(7)" alt="It Shall">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="motiv8.jpg" style="width:6rem" onclick="currentSlide(8)" alt="Enjoy Every Moment">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="motiv9.jpg" style="width:6rem" onclick="currentSlide(9)" alt="Fight For It">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="motiv10.jpg" style="width:6rem" onclick="currentSlide(10)" alt="Relax">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="motiv11.jpg" style="width:6rem" onclick="currentSlide(11)" alt="Stay Strong">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="motiv12.jpg" style="width:6rem" onclick="currentSlide(12)" alt="Never. Ever.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="motiv13.jpg" style="width:6rem" onclick="currentSlide(13)" alt="Search for Rainbows">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="motiv14.jpg" style="width:6rem" onclick="currentSlide(14)" alt="See the World">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="motiv15.jpg" style="width:6rem" onclick="currentSlide(15)" alt="See Other Worlds">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="motiv16.jpg" style="width:6rem" onclick="currentSlide(16)" alt="What If You Could Anywhere?">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="motiv17.jpg" style="width:6rem" onclick="currentSlide(17)" alt="The Mystery of the Universe">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="motiv18.jpg" style="width:6rem" onclick="currentSlide(18)" alt="Be Awesome">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="motiv19.jpg" style="width:6rem" onclick="currentSlide(19)" alt="Just Think">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="motiv20.jpg" style="width:6rem" onclick="currentSlide(20)" alt="And Take a Breather">
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  //Handling Slide Show Length Ops
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+// Auto Play Slideshow function
+var myIndex = 0;
+changer();
+
+function changer() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(changer, 10000); // Change image every 10 seconds
+}
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  	font-size: 25px;
+  	margin: 0;
+  	color: white;
+}
+
+.head {
+	font-family: Impact;
+    font-style: italic;
+    margin: 0;
+    color: white;
+    display: inline;
+    font-size: 1.7rem;
+}
+
+.maintitle{
+	font-family: Impact;
+    font-style: italic;
+    margin: 0;
+    color: white;
+    text-align: center;
+    }
+
+.secondtitle{
+	font-family: Impact;
+    font-style: italic;
+    margin: 0;
+    color: white;
+    text-align:center;
+    }
+   
+.thirdtitle{
+	font-family: Impact;
+    font-style: italic;
+    margin: 0;
+    color: white;
+    font-size: 26px;
+    } 
+.catlist{
+    font-family: Arial;
+    }
+.navbarli{
+	display: inline;
+}
+body {
+	background-image: url("todobackground.jpg");
+	background-size: 100%;
+}
+
+
+html, body{
+	margin: 0;
+	padding: 0;
+	width: 100%
+}
+
+header{
+	width: 100%;
+	height: 10vh;
+}
+
+nav{
+	position: fixed;
+	width: 100%;
+}
+
+nav ul{
+	list-style: none;
+	background: black;
+	overflow: hidden;
+	color: white;
+	padding: 0;
+	text-align: center;
+	margin: 0;
+	transition: 1s;
+}
+
+nav.black ul{
+	background: #000;
+}
+
+nav ul li{
+	display: inline-block;
+	padding: 20px;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+}
+
+
+
+.table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+	table-align: left;
+}
+
+.td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.wrap{
+	margin: auto;
+	width: 70%;
+	padding: 10px;
+	color: #f7f9ed;
+}
+
+.center{
+	text-align: center;
+	color: blue;
+}
+#left{
+	text-align: center;
+	float: left;
+}
+
+#right{
+	text-align: left;
+	float: right;
+}
